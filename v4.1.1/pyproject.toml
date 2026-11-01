@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edh-goldfish-v4"
+version = "4.1.1"
+description = "EDH goldfish simulator v4: concrete measurements only. Structured-field + Scryfall-tag parser, Brandon's 10-step play policy, customizable keep rules."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+goldfish4 = "edh_goldfish_v4.cli:main"
+goldfish4-dashboard = "edh_goldfish_v4.dashboard:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
